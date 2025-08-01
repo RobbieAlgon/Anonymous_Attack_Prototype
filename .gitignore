@@ -1,0 +1,60 @@
+# Godot 4 specific
+*.import
+*.translation
+*.tmp
+*.bak
+*.log
+*.pidb
+*.mono
+*.gen.*
+*.tscn.bak
+*.tres.bak
+*.godot
+*.lock
+
+# Godot editor settings and local overrides
+project.godot.local
+uid_cache.bin
+*.cfg
+*.ini
+
+# Export-related files
+export_presets.cfg
+export_presets.cfg.bak
+export/
+
+# Build and output directories
+build/
+bin/
+dist/
+
+# Cache and temporary directories
+.cache/
+.godot/
+.import/
+export_templates/
+crashlytics/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE-specific files
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+cmake-build-*/
+
+# Other common ignores
+*.zip
+*.tar.gz
+*.7z
+*.rar
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
