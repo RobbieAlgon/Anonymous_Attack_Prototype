@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc25hsvvnmamc"]
+
+[ext_resource type="Script" uid="uid://cocnu60xfvyo8" path="res://scripts/pen_drieve.gd" id="1_wtpae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2m2a6"]
+size = Vector3(1.17822, 2.17188, 1.54584)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gudec"]
+
+[node name="Pendrive" type="Area3D"]
+script = ExtResource("1_wtpae")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059082, 0.228516, -0.0552063)
+shape = SubResource("BoxShape3D_2m2a6")
+
+[node name="obj" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gudec")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745291, 0)
+billboard = 2
+text = "Take Me"
