@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://ke13w4etfq1a"]
+[gd_scene load_steps=11 format=4 uid="uid://ke13w4etfq1a"]
 
 [ext_resource type="Script" uid="uid://06ki2sy53c1y" path="res://scripts/player.gd" id="1_e6syb"]
-[ext_resource type="Animation" uid="uid://bbkqvrukmxtsv" path="res://assets/Animations/AnimLibrary/anim.res" id="2_lbnc1"]
+[ext_resource type="Texture2D" uid="uid://c1b6n8r6rt5kr" path="res://assets/Textures/HumanAnimations_ColorPalette.png" id="2_lbnc1"]
+[ext_resource type="Animation" uid="uid://bbkqvrukmxtsv" path="res://assets/Animations/AnimLibrary/anim.res" id="3_twtkp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0wfyh"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_e6syb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuo4h"]
+albedo_texture = ExtResource("2_lbnc1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncx1s"]
 vertex_color_use_as_albedo = true
@@ -191,7 +195,7 @@ bind/51/pose = Transform3D(3.20288e-08, -1, -1.1269e-07, 1, 8.10687e-08, 1.22935
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_twtkp"]
 _data = {
-&"anim": ExtResource("2_lbnc1")
+&"anim": ExtResource("3_twtkp")
 }
 
 [node name="Player" type="CharacterBody3D" groups=["players"]]
@@ -608,6 +612,7 @@ bones/55/rotation = Quaternion(-0.0169679, -0.0569452, -0.000967949, 0.998233)
 bones/55/scale = Vector3(1, 1, 1)
 
 [node name="HumanM_BodyMesh" type="MeshInstance3D" parent="HumanM_Model/GeneralSkeleton"]
+material_override = SubResource("StandardMaterial3D_yuo4h")
 mesh = SubResource("ArrayMesh_wgoyl")
 skin = SubResource("Skin_3tts4")
 
